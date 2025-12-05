@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "BLACKCAT_PUBLIC_KEY": "@BLACKCAT_PUBLIC_KEY",
+    "BLACKCAT_SECRET_KEY": "@BLACKCAT_SECRET_KEY"
+  }
+}
